@@ -1,0 +1,151 @@
+@import url("https://fonts.google.com/specimen/Montserrat");
+@import url("https://fonts.google.com/specimen/Fraunces");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: 660px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+
+.left {
+  width: 50%;
+}
+
+.left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right {
+  width: 50%;
+  padding: 2rem;
+}
+
+.right .product-name {
+  padding-right: 2rem;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 1.75rem;
+  font-weight: 700;
+}
+
+.right .description {
+  font-family: "Montserrat";
+  font-size: 19px;
+  color: hsl(228, 12%, 48%);
+  line-height: 22px;
+  margin-bottom: 1.75rem;
+}
+
+.perfum {
+  font-family: "Montserrat";
+  font-size: 19px;
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1.75rem;
+  text-transform: uppercase;
+}
+
+.prices {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.prices .sales-price {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.prices .disc-price {
+  font-family: "Montserrat";
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.right .card-btn {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: hsl(158, 31%, 37%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: hsl(159, 34%, 42%);
+}
+
+.attribution {
+  position: absolute;
+  top: 100%; /* posiciona a div abaixo do contêiner */
+  left: 0; /* alinha a div à esquerda */
+  width: 100%; /* define a largura total */
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: 40%;
+  }
+
+  .left img {
+    content: url("./images/image-product-mobile.jpg");
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .right {
+    width: 100%;
+  }
+
+  .right .product-name {
+    padding-right: 0;
+  }
+  .attribution {
+    margin-top: 20px;
+  }
+}
